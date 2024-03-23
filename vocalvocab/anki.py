@@ -34,8 +34,8 @@ def get_model():
         templates=[
             {
                 'name': 'Card 1',
-                'qfmt': '{{Phrase}}<br>{{Audio}}',  # Front of card
-                'afmt': '{{FrontSide}}<hr id="answer">{{Translation}}<br>{{Pronunciation}}',  # Back of card
+                'qfmt': '{{Phrase}}',  # Front of card
+                'afmt': '{{FrontSide}}<hr id="answer">{{Translation}}<br>{{Pronunciation}}<br>{{Audio}}',  # Back of card
             },
         ],
         css='''
