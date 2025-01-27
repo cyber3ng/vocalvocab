@@ -32,6 +32,9 @@ def valid_csv_file(csv_file_path):
             for row in reader:
                 if len(row) != len(expected_headers):
                     raise ArgumentTypeError(f"Error at line {reader.line_num}: Expected {len(expected_headers)} fields but found {len(row)}.")
+                for field in expected_headers:
+                    if not row[field].strip():
+                        raise ArgumentTypeError(f"Error at line {reader.line_num}: Field '{field}' is empty.")
     except FileNotFoundError:
         raise ArgumentTypeError(f"File not found: {csv_file_path}")
     return csv_file_path 
