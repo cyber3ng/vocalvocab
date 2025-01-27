@@ -37,6 +37,11 @@ def get_model():
                 'qfmt': '{{Phrase}}',  # Front of card
                 'afmt': '{{FrontSide}}<hr id="answer">{{Translation}}<br>{{Pronunciation}}<br>{{Audio}}',  # Back of card
             },
+            {
+                'name': 'Card 2',
+                'qfmt': '{{Translation}}',  # Front of card
+                'afmt': '{{FrontSide}}<hr id="answer">{{Phrase}}<br>{{Pronunciation}}<br>{{Audio}}',  # Back of card
+            },
         ],
         css='''
             .card {
